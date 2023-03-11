@@ -16,7 +16,7 @@ plt.xlabel("X Axis")
 plt.ylabel("Y Axis")
 
 def bres(x1,y1,x2,y2):
-    
+    dx, dy  = 1
     x,y = x1,y1
     dx = abs(x2 - x1)
     dy = abs(y2 -y1)
