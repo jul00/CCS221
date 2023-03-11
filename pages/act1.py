@@ -34,18 +34,22 @@ def bres(x1,y1,x2,y2):
     xcoordinates = [x]
     ycoordinates = [y]
 
-    for k in range(2, dx + 2):
-        if p > 0:
-            y = y + 1 if y < y2 else y - 1
-            p = p + 2 * (dy - dx)
-        else:
-            p = p + 2 * dy
+    if dx != 0 & dy != 0:
 
-        x = x + 1 if x < x2 else x - 1
-        
-        print(f"x = {x}, y = {y}")
-        xcoordinates.append(x)
-        ycoordinates.append(y)
+        for k in range(2, dx + 2):
+            if p > 0:
+                y = y + 1 if y < y2 else y - 1
+                p = p + 2 * (dy - dx)
+            else:
+                p = p + 2 * dy
+
+            x = x + 1 if x < x2 else x - 1
+            
+            print(f"x = {x}, y = {y}")
+            xcoordinates.append(x)
+            ycoordinates.append(y)
+    else:
+        st.write('Try again.')
 
     xMid = (x1 + x2)/2
     yMid = (y1 + y2)/2 
