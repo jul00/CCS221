@@ -20,7 +20,7 @@ def bres(x1,y1,x2,y2):
     x,y = x1,y1
     dx = abs(x2 - x1)
     dy = abs(y2 -y1)
-    gradient = dy/float(dx)
+    gradient = dy/dx
 
     if gradient > 1:
         dx, dy = dy, dx
