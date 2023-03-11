@@ -39,8 +39,8 @@ def bres(x1,y1,x2,y2):
     xMid = (x1 + x2)/2
     yMid = (y1 + y2)/2 
     
-    st.plot(xcoordinates, ycoordinates)
-    st.plot(xMid, yMid, 'ro')
+    st.pyplot(xcoordinates, ycoordinates)
+    st.pyplot(xMid, yMid, 'ro')
     st.show()
 
 def DDALine(x1, y1, x2, y2, color):
@@ -56,7 +56,7 @@ def DDALine(x1, y1, x2, y2, color):
     Yinc = float(dy / steps)
 
     for i in range(0, int(steps + 1)):
-        st.plot(int(x1), int(y1), color)
+        plt.plot(int(x1), int(y1), color)
         x1 += Xinc
         y1 += Yinc
 
