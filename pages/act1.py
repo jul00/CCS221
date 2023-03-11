@@ -21,20 +21,18 @@ def bres(x1,y1,x2,y2):
     dx = abs(x2 - x1)
     dy = abs(y2 -y1)
     gradient = dy/dx
+    if dx != 0 & dy !=0:
+        if gradient > 1:
+            dx, dy = dy, dx
+            x, y = y, x
+            x1, y1 = y1, x1
+            x2, y2 = y2, x2
 
-    if gradient > 1:
-        dx, dy = dy, dx
-        x, y = y, x
-        x1, y1 = y1, x1
-        x2, y2 = y2, x2
-
-    p = 2*dy - dx
-    st.write(f"x = {x}, y = {y}")
-    
-    xcoordinates = [x]
-    ycoordinates = [y]
-
-    if dx != 0 & dy != 0:
+        p = 2*dy - dx
+        st.write(f"x = {x}, y = {y}")
+        
+        xcoordinates = [x]
+        ycoordinates = [y]
 
         for k in range(2, dx + 2):
             if p > 0:
@@ -42,12 +40,11 @@ def bres(x1,y1,x2,y2):
                 p = p + 2 * (dy - dx)
             else:
                 p = p + 2 * dy
-
-            x = x + 1 if x < x2 else x - 1
-            
-            print(f"x = {x}, y = {y}")
-            xcoordinates.append(x)
-            ycoordinates.append(y)
+                x = x + 1 if x < x2 else x - 1
+                
+                print(f"x = {x}, y = {y}")
+                xcoordinates.append(x)
+                ycoordinates.append(y)
     else:
         st.write('Try again.')
 
