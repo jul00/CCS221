@@ -15,7 +15,7 @@ def bres(x1,y1,x2,y2):
         x2, y2 = y2, x2
 
     p = 2*dy - dx
-    print(f"x = {x}, y = {y}")
+    st.write(f"x = {x}, y = {y}")
     
     xcoordinates = [x]
     ycoordinates = [y]
