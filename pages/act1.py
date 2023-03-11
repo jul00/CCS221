@@ -113,5 +113,7 @@ def main():
     midpoint(x1, y1, x2, y2, color)
 
 
-if __name__== "__main__":
-    main()
+@st.cache(persist = True)
+def load_data():
+    if __name__== "__main__":
+        main()
