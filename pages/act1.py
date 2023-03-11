@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import streamlit as st
 
 plt.xlabel("X Axis")
 plt.ylabel("Y Axis")
