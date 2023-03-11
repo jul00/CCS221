@@ -1,20 +1,6 @@
 import matplotlib.pyplot as plt
 import streamlit as st
 
-def main():
-    x1 = st.number_input(input('Enter the Starting point of x: '))
-    y1 = st.number_input(input('Enter the Starting point of y: '))
-    x2 = st.number_input(input('Enter the end point of x: '))
-    y2 = st.number_input(input('Enter the end point of y: '))
-    color = ".r"
-
-    bres(x1, y1, x2, y2)
-    DDALine(x1, y1, x2, y2, color)
-    midpoint(x1, y1, x2, y2, color)
-
-plt.xlabel("X Axis")
-plt.ylabel("Y Axis")
-
 def bres(x1,y1,x2,y2):
     
     x,y = x1,y1
@@ -116,6 +102,19 @@ def midpoint(x1, y1, x2, y2, color):
     plt.plot(xMid, yMid, 'ro')
     plt.show()
 
+def main():
+    x1 = st.number_input(input('Enter the Starting point of x: '))
+    y1 = st.number_input(input('Enter the Starting point of y: '))
+    x2 = st.number_input(input('Enter the end point of x: '))
+    y2 = st.number_input(input('Enter the end point of y: '))
+    color = ".r"
+
+    bres(x1, y1, x2, y2)
+    DDALine(x1, y1, x2, y2, color)
+    midpoint(x1, y1, x2, y2, color)
+
+    plt.xlabel("X Axis")
+    plt.ylabel("Y Axis")
 
 if __name__== "__main__":
     main()
