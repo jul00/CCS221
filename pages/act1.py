@@ -102,10 +102,10 @@ def midpoint(x1, y1, x2, y2, color):
     st.show()
 
 def main():
-    x1 = int(input("Enter the Starting point of x: "))
-    y1 = int(input("Enter the Starting point of y: "))
-    x2 = int(input("Enter the end point of x: "))
-    y2 = int(input("Enter the end point of y: "))
+    x1 = st.number_input(input("Enter the Starting point of x: "))
+    y1 = st.number_input(input("Enter the Starting point of y: "))
+    x2 = st.number_input(input("Enter the end point of x: "))
+    y2 = st.number_input(input("Enter the end point of y: "))
     color = ".r"
 
     bres(x1, y1, x2, y2)
